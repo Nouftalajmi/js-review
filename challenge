@@ -1,0 +1,85 @@
+const length = 3;
+const width = 5;
+const area = length * width;
+console.log(`"if the length of a rectangle is ${length}","and the width is ${width}"
+"then the area is ${area}"`);
+
+// function
+// console.log(`The result is ${area}`);
+// function theAreaOfArect(length, width) {
+//   console.log(length * width);
+// }
+// theAreaOfArect(5, 3);
+
+// Arrays
+
+const favorite_animals = ["dog", "cat", "monkey", "rabbit"];
+
+addedAnimal = favorite_animals[3] = "guinea pig";
+favorite_animals.splice(1, 1);
+favorite_animals.push("parrot");
+
+console.log(favorite_animals);
+
+// functions
+function cube(number) {
+  n = number ** 3;
+  console.log(n);
+}
+cube(4);
+
+const by_three = (number) => {
+  if (number % 3 == 0) {
+    cube(number);
+    // console.log(n);
+  } else {
+    console.log("false");
+  }
+};
+by_three(9);
+
+// functions Extra
+
+const padel_court_cost = (hours, court_type) => {
+  const indoor = "indoor";
+  const outdoor = "outdoor";
+
+  if (court_type === indoor) {
+    cost = hours * 30;
+
+    console.log(`the cost per hour is ${cost} kwd`);
+  } else if (court_type === outdoor) {
+    cost2 = hours * 20;
+
+    console.log(`the cost per hour is ${cost2} kwd`);
+  } else if (court_type === indoor && hours >= 3) {
+    cost3 = hours * 30 - (20 / 100) * (hours * 30);
+    // twentyOff = cost3 - (20 / 100) * cost3;
+    console.log(`the cost per hour is ${cost3} kwd`);
+  } else if (court_type === outdoor && hours >= 3) {
+    cost4 = hours * 20 - (20 / 100) * (hours * 20);
+    // twentyOff2 = cost4 - (20 / 100) * cost4;
+    console.log(`the cost per hour is ${cost4} kwd`);
+  }
+};
+
+padel_court_cost(3, "outdoor");
+
+// Functions and loops
+
+function printer(elements) {
+  elements = ["20", "30", "40", "50"];
+  console.log(
+    `${elements[0]}C, ${elements[1]}C, ${elements[2]}C, ${elements[3]}C`
+  );
+}
+printer();
+
+function to_celsius(tempreture) {
+  tempreture = ["68", "86", "104", "122"];
+  //   fromCelsius = `${(tempreture[0], [1], [2], [3])} `;
+  toCelsius = (fromCelsius - 32) * (5 / 9);
+
+  //   console.log(toCelsius);
+}
+// to_celsius();
