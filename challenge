@@ -41,45 +41,56 @@ by_three(9);
 // functions Extra
 
 const padel_court_cost = (hours, court_type) => {
-  const indoor = "indoor";
-  const outdoor = "outdoor";
+  //   const indoor = "indoor";
+  //   const outdoor = "outdoor";
+  //   let cost;
+  //   if (court_type === "indoor") {
+  //     cost = hours * 30;
+  //     console.log(`the cost per hour is ${cost} kwd`);
+  //   } else if (court_type === "outdoor") {
+  //     cost = hours * 20;
+  //     console.log(`the cost per hour is ${cost} kwd`);
+  //   } else if (court_type === indoor && hours >= 3) {
+  //     cost = hours * 30 - (20 / 100) * (hours * 30);
+  //     // twentyOff = cost - (20 / 100) * cost;
+  //     console.log(`the cost per hour is ${cost} kwd`);
+  //   } else if (court_type === outdoor && hours >= 3) {
+  //     cost = hours * 20 - (20 / 100) * (hours * 20);
+  //     // twentyOff2 = cost - (20 / 100) * cost;
+  //     console.log(`the cost per hour is ${cost} kwd`);
+  //   }
 
-  if (court_type === indoor) {
-    cost = hours * 30;
+  let price = 0;
+  if (court_type == "indoor") {
+    price = 30;
+  } else if (court_type == "outdoor") {
+    price = 20;
+  } else {
+    return "Please choose indoor, or outdoor!!!!!!";
+  }
 
-    console.log(`the cost per hour is ${cost} kwd`);
-  } else if (court_type === outdoor) {
-    cost2 = hours * 20;
-
-    console.log(`the cost per hour is ${cost2} kwd`);
-  } else if (court_type === indoor && hours >= 3) {
-    cost3 = hours * 30 - (20 / 100) * (hours * 30);
-    // twentyOff = cost3 - (20 / 100) * cost3;
-    console.log(`the cost per hour is ${cost3} kwd`);
-  } else if (court_type === outdoor && hours >= 3) {
-    cost4 = hours * 20 - (20 / 100) * (hours * 20);
-    // twentyOff2 = cost4 - (20 / 100) * cost4;
-    console.log(`the cost per hour is ${cost4} kwd`);
+  let total = price * hours;
+  if (hours >= 3) {
+    return (total = total - (total * 20) / 100);
+  } else {
+    return total;
   }
 };
 
-padel_court_cost(3, "outdoor");
+console.log(padel_court_cost(10, "outdoor"));
 
 // Functions and loops
-
-function printer(elements) {
-  elements = ["20", "30", "40", "50"];
-  console.log(
-    `${elements[0]}C, ${elements[1]}C, ${elements[2]}C, ${elements[3]}C`
-  );
-}
-printer();
+elements = [20, 30, 40, 50];
+elements.forEach((elements) => {
+  console.log(`${elements}C`);
+});
 
 function to_celsius(tempreture) {
   tempreture = ["68", "86", "104", "122"];
-  //   fromCelsius = `${(tempreture[0], [1], [2], [3])} `;
-  toCelsius = (fromCelsius - 32) * (5 / 9);
+
+  //   toCelsius = (`${tempreture}` - 32) * (5 / 9);
 
   //   console.log(toCelsius);
 }
-// to_celsius();
+
+to_celsius();
